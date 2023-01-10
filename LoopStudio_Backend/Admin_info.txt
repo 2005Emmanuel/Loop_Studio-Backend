@@ -1,0 +1,3 @@
+username = LoopStudio
+email = hilaryemmanuel841@gmail.com
+password = Django_Api
