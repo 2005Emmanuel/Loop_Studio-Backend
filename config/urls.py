@@ -19,6 +19,6 @@ from LoopStudio_Backend import views
 
 urlpatterns = [
     path('', views.contact_Api, name='contact_Api'),
-    path('api-auth/', include('rest_framework.urls')),
+    # path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
 ]
