@@ -14,7 +14,7 @@ from rest_framework.response import Response
 # from .serializers import ContactSerializer
 
 class ContactViewSet(viewsets.ModelViewSet):
-    queryset = clients.objects.all()
+    queryset = clients.objects.create()
     serializer_class = clients_serializer
 
 @api_view(['POST'])
