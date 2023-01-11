@@ -130,7 +130,7 @@ REST_FRAMEWORK = {
         #    'DEFAULT_PERMISSION_CLASSES':[  #development
         #            'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly' 
         #    ]
-              'DEFAULT_RENDERER_CLASSES': (
+              'DEFAULT_RENDERER_CLASSES': (    #production
          'rest_framework.renderers.JSONRenderer',
      )
 }

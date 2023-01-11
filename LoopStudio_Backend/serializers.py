@@ -4,11 +4,11 @@
 #     model = clients
 #     fields = ['fullname', 'email', 'message']
 from rest_framework import serializers
-from LoopStudio_Backend.models import Snippet
+from LoopStudio_Backend.models import Clients
 
 
 
-class SnippetSerializer(serializers.ModelSerializer):
+class Clients_Serializer(serializers.ModelSerializer):
     class Meta:
-        model = Snippet
-        fields = ['id', 'title', 'code', 'linenos', 'language']
+        model = Clients
+        fields = ['id', 'fullname', 'email', 'message']

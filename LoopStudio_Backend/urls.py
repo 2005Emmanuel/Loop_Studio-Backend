@@ -13,8 +13,7 @@ from LoopStudio_Backend import views
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    path('', views.snippet_list),
-    path('LoopStudio_Backend/<int:pk>/', views.snippet_detail),
+    path('', views.Contact_us_Api)
 
 
 ]
