@@ -14,10 +14,10 @@ from rest_framework.response import Response
 # from .serializers import ContactSerializer
 
 class ContactViewSet(viewsets.ModelViewSet):
-    queryset = clients.objects.create()
+    # queryset = clients.objects.create()
     serializer_class = clients_serializer
 
-@api_view(['POST'])
+# @api_view(['POST'])
 def create(self, request, *args, **kwargs):
      if request.method == 'POST':
         serializer = self.get_serializer(data=request.data)
