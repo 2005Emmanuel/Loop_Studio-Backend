@@ -18,23 +18,29 @@ Including another URLconf
 # from LoopStudio_Backend import views
 
 # urlpatterns = [
-#     path('', views.contact_Api, name='contact_Api'),
-#     path('api-auth/', include('rest_framework.urls')),
 #     path('admin/', admin.site.urls),
+#     path('api-auth/', include('rest_framework.urls')),
+#     path('contact_Api/', views.contact_Api, name='contact_Api'),
+# ]
+# from django.urls import path, include
+# from LoopStudio_Backend.views import ContactViewSet
+# from rest_framework.routers import DefaultRouter
+
+# router = DefaultRouter()
+# router.register('contact', ContactViewSet, basename='contact')
+
+# urlpatterns = [
+#     path('', include(router.urls)),
+#     path('api-auth/', include('rest_framework.urls')),
 # ]
 
+# from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from LoopStudio_Backend.views import ContactViewSet
-
-
-router = DefaultRouter()
-router.register(r'contacts', ContactViewSet, basename='contacts')
 
 urlpatterns = [
-    path('', include(router.urls)),
-    # path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include('LoopStudio_Backend.urls')),
+    # path('api-auth/', include('rest_framework.urls')),
 ]
-
